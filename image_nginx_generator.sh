@@ -1,5 +1,7 @@
 #!/bin/sh
 
+wget --no-check-certificate -r 'https://drive.google.com/uc?export=download&id=12-r_ur069uKIByyT4BTC2gMFSDf62BKy' -O image_domain.stub
+
 SED=$(which sed)
 
 # check the domain is valid!
