@@ -22,8 +22,8 @@ echo "The subdomain has been successfully generated"
 
 cp $CONFIG "/etc/nginx/sites-available"
 ln -s "/etc/nginx/sites-available/$DOMAIN" "/etc/nginx/sites-enabled"
-
-sudo certbot --nginx --redirect -d $DOMAIN
+sudo systemctl restart nginx;
+sudo certbot --nginx --register-unsafely-without-email --redirect -d $DOMAIN
 sudo systemctl status certbot.timer
 sudo certbot renew --dry-run
 
