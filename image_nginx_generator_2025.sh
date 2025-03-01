@@ -30,7 +30,7 @@ sudo systemctl status certbot.timer
 sudo certbot renew --dry-run
 
 rm -f image_nginx_generator.sh
-rm -f image_domain.stub
+rm -f image_domain_2025.stub
 rm -f $DOMAIN
 systemctl status nginx;
 echo "---> The subdomain has been moved to nginx to sites-available and symlinked to sites-enabled"
